@@ -447,6 +447,7 @@
       justify-content: space-between;
       gap: 10px
     }
+
     .ports-grid a[hidden],
     [hidden] {
       display: none !important
@@ -509,7 +510,7 @@
       position: absolute;
       inset: 0;
       z-index: -2;
-      background: linear-gradient(90deg, rgba(255, 253, 248, .97) 0%, rgba(255, 253, 248, .91) 38%, rgba(255, 253, 248, .20) 75%), url("assets/imgs/homepage-header.webp") center/cover no-repeat;
+      background: linear-gradient(90deg, rgba(255, 253, 248, .97) 0%, rgba(255, 253, 248, .91) 38%, rgba(255, 253, 248, .20) 75%), url("assets/imgs/valencia-top-down.jpg") center/cover no-repeat;
       animation: heroDrift 18s ease-in-out infinite alternate
     }
 
@@ -1406,7 +1407,7 @@
         padding: 0 10px 12px
       }
 
-            .nav-item.has-mega.open .ports-panel {
+      .nav-item.has-mega.open .ports-panel {
         max-height: 65vh;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
@@ -1459,10 +1460,11 @@
         padding: 9px 0;
         font-size: .84rem
       }
-    .ports-grid a[hidden],
-    [hidden] {
-      display: none !important
-    }
+
+      .ports-grid a[hidden],
+      [hidden] {
+        display: none !important
+      }
 
       .overview-grid {
         gap: 42px
@@ -1516,7 +1518,7 @@
       }
 
       .hero::before {
-        background: linear-gradient(90deg, rgba(255, 253, 248, .96), rgba(255, 253, 248, .79)), url("assets/imgs/homepage-header.webp") center/cover no-repeat
+        background: linear-gradient(90deg, rgba(255, 253, 248, .96), rgba(255, 253, 248, .79)), url("assets/imgs/valencia-top-down.jpg") center/cover no-repeat
       }
 
       .hero::after {
@@ -1955,7 +1957,8 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item active"><a class="nav-link" href="about.html" aria-current="page">About</a></li>
           <li class="nav-item has-dropdown">
-            <a class="nav-link dropdown-trigger" href="services.html" aria-expanded="false">Services <i class="fa-solid fa-chevron-down nav-arrow" aria-hidden="true"></i></a>
+            <a class="nav-link dropdown-trigger" href="services.html" aria-expanded="false">Services <i
+                class="fa-solid fa-chevron-down nav-arrow" aria-hidden="true"></i></a>
             <div class="dropdown-menu">
               <a href="services.html#provisions">Food Provisions Supply</a>
               <a href="services.html#bonded">Bonded Stores</a>
@@ -1984,7 +1987,7 @@
                 <input class="port-search" id="port-search" type="search" placeholder="Search 49 ports…"
                   aria-label="Search ports">
               </div>
-                            <div class="ports-grid" id="ports-grid">
+              <div class="ports-grid" id="ports-grid">
                 <a href="ports/ship-chandler-dar-es-salaam.html">Ship Chandler Dar Es Salaam</a>
                 <a href="ports/ship-chandler-apapa.html">Ship Chandler Apapa</a>
                 <a href="ports/ship-chandler-onne-port-nigeria.html">Ship Chandler Onne Port Nigeria</a>
@@ -2086,7 +2089,7 @@
             consumables.</p>
         </div>
         <div class="about-story-visual reveal">
-          <img src="assets/imgs/home-about-2.jpg" alt="Commercial vessel and marine supply operations in Spain">
+          <img src="assets/imgs/valencia-about.jpg" alt="Commercial vessel and marine supply operations in Spain">
         </div>
       </div>
     </section>
@@ -2285,7 +2288,7 @@
         });
       });
 
-            const search = document.getElementById('port-search');
+      const search = document.getElementById('port-search');
       if (search) {
         const portLinks = [...document.querySelectorAll('#ports-grid a')];
         search.addEventListener('input', () => {
