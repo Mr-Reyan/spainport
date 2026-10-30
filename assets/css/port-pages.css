@@ -1021,8 +1021,15 @@
       margin-bottom: 60px;
     }
 
-    .footer-brand .logo strong {
+    .footer-brand .logo strong,
+    .footer-brand .logo-text strong {
       color: white;
+    }
+
+    .footer-brand .logo-text span {
+      color: #ffd27c;
+      font-size: .64rem;
+      letter-spacing: .2em;
     }
 
     .footer-brand p {
