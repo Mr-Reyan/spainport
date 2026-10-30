@@ -1302,20 +1302,6 @@
             background: linear-gradient(120deg, #eef4f6 0%, #f8f7f1 62%, #fff2d8 100%)
         }
 
-        .contact-hero::before {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            right: -110px;
-            top: 70px;
-            width: 470px;
-            height: 470px;
-            border: 1px solid rgba(24, 63, 98, .12);
-            border-radius: 50%;
-            box-shadow: 0 0 0 42px rgba(24, 63, 98, .035), 0 0 0 88px rgba(24, 63, 98, .025);
-            pointer-events: none
-        }
-
         .contact-hero::after {
             content: "";
             position: absolute;
@@ -1892,14 +1878,6 @@
                 padding: 125px 0 62px
             }
 
-            .contact-hero::before {
-                width: 260px;
-                height: 260px;
-                right: -130px;
-                top: 70px;
-                box-shadow: 0 0 0 25px rgba(24, 63, 98, .035), 0 0 0 55px rgba(24, 63, 98, .025)
-            }
-
             .contact-hero-copy h1 {
                 font-size: clamp(2.8rem, 12vw, 4.5rem)
             }
@@ -2323,7 +2301,7 @@
         </div>
     </header>
     <main>
-        <section class="contact-hero" aria-labelledby="contact-title">
+        <section class="contact-hero hero" aria-labelledby="contact-title">
             <div class="container">
                 <div class="contact-hero-copy">
                     <span class="eyebrow">Your Valencia Supply Desk</span>
