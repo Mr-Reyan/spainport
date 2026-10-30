@@ -447,6 +447,10 @@
             justify-content: space-between;
             gap: 10px
         }
+    .ports-grid a[hidden],
+    [hidden] {
+      display: none !important
+    }
 
         .ports-grid a::after {
             content: none
@@ -1402,11 +1406,30 @@
                 padding: 0 10px 12px
             }
 
-            .nav-item.has-mega.open .ports-panel {
-                max-height: 650px;
-                padding: 12px 10px 18px;
-                transform: none
-            }
+                  .nav-item.has-mega.open .ports-panel {
+        max-height: 65vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+        padding: 16px 14px 20px;
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        box-shadow: 0 4px 18px rgba(16, 43, 70, .08);
+        margin: 10px 0 16px;
+        transform: none
+      }
+
+      .ports-panel::-webkit-scrollbar,
+      .dropdown-menu::-webkit-scrollbar {
+        width: 6px
+      }
+
+      .ports-panel::-webkit-scrollbar-thumb,
+      .dropdown-menu::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px
+      }
 
             .ports-panel-head {
                 display: block;
@@ -1436,6 +1459,10 @@
                 padding: 9px 0;
                 font-size: .84rem
             }
+    .ports-grid a[hidden],
+    [hidden] {
+      display: none !important
+    }
 
             .overview-grid {
                 gap: 42px
@@ -1697,8 +1724,7 @@
                     <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item has-dropdown">
-                        <button class="nav-link dropdown-trigger" type="button" aria-expanded="false">Services <i
-                                class="fa-solid fa-chevron-down nav-arrow" aria-hidden="true"></i></button>
+                        <a class="nav-link dropdown-trigger" href="services.html" aria-expanded="false">Services <i class="fa-solid fa-chevron-down nav-arrow" aria-hidden="true"></i></a>
                         <div class="dropdown-menu">
                             <a href="services.html#provisions">Food Provisions Supply</a>
                             <a href="services.html#bonded">Bonded Stores</a>
@@ -1727,57 +1753,57 @@
                                 <input class="port-search" id="port-search" type="search" placeholder="Search 49 ports…"
                                     aria-label="Search ports">
                             </div>
-                            <div class="ports-grid" id="ports-grid">
-                                <a href="#port-info">Ship Chandler Dar Es Salaam</a>
-                                <a href="#port-info">Ship Chandler Apapa</a>
-                                <a href="#port-info">Ship Chandler Onne Port Nigeria</a>
-                                <a href="#port-info">San Pedro Ship Supply Chandler</a>
-                                <a href="#port-info">Ship Chandler Abidjan</a>
-                                <a href="#port-info">Ship Chandler Freetown</a>
-                                <a href="#port-info">Monrovia Ship Chandler</a>
-                                <a href="#port-info">Ship Chandler Maputo</a>
-                                <a href="#port-info">Ship Chandler Matadi</a>
-                                <a href="#port-info">Ship Chandler Beira</a>
-                                <a href="#port-info">Ship Chandler Angola</a>
-                                <a href="#port-info">Ship Chandler Lobito</a>
-                                <a href="#port-info">ShipChandler Lome</a>
-                                <a href="#port-info">Shipchandler Lome</a>
-                                <a href="#port-info">Ivory Coast Ship Chandler</a>
-                                <a href="#port-info">Nouadhibou Ship Chandler</a>
-                                <a href="#port-info">Ship Chandler Luanda</a>
-                                <a href="#port-info">Ship Chandler Cape Verde</a>
-                                <a href="#port-info">Ship Chandler Gabon</a>
-                                <a href="#port-info">Ship Chandler Namibia</a>
-                                <a href="#port-info">Walvis Bay Ship Chandler</a>
-                                <a href="#port-info">Ship Chandler Gentil Port - Gabon</a>
-                                <a href="#port-info">Ship Chandler Takoradi</a>
-                                <a href="#port-info">Ship Chandler Congo</a>
-                                <a href="#port-info">Shipchandler Lagos</a>
-                                <a href="#port-info">Ship Chandler Port Ambon</a>
-                                <a href="#port-info">Shipchandler Pointe Noire</a>
-                                <a href="#port-info">Ship Chandler Djibouti</a>
-                                <a href="#port-info">Ship Chandler Cabinda</a>
-                                <a href="#port-info">Ship Chandler Tema</a>
-                                <a href="#port-info">Ship Chandler Mindelo</a>
-                                <a href="#port-info">Ship Chandler Casablanca</a>
-                                <a href="#port-info">Ship Chandler Safi Port Morocco</a>
-                                <a href="#port-info">Ship Chandler Kamsar</a>
-                                <a href="#port-info">Ship Chandler Soyo</a>
-                                <a href="#port-info">Dakar Ship Chandler</a>
-                                <a href="#port-info">Ship Chandler Senegal</a>
-                                <a href="#port-info">Ship Chandler Dakar</a>
-                                <a href="#port-info">Bissau Ship Chandler - Guinea</a>
-                                <a href="#port-info">Conakry Ship Chandler</a>
-                                <a href="#port-info">Ship Chandler Cotonou</a>
-                                <a href="#port-info">Douala Ship Chandler</a>
-                                <a href="#port-info">Liberia Ship Chandler</a>
-                                <a href="#port-info">Namibia Ship Chandler</a>
-                                <a href="#port-info">Ship Chandler Dakar</a>
-                                <a href="#port-info">Ship Chandler Mombasa</a>
-                                <a href="#port-info">Ship Chandlers Saldanha Bay</a>
-                                <a href="#port-info">Ship Chandler Owendo</a>
-                                <a href="#port-info">Ship Chandlers Richards Bay</a>
-                            </div>
+                                          <div class="ports-grid" id="ports-grid">
+                <a href="ports/ship-chandler-dar-es-salaam.html">Ship Chandler Dar Es Salaam</a>
+                <a href="ports/ship-chandler-apapa.html">Ship Chandler Apapa</a>
+                <a href="ports/ship-chandler-onne-port-nigeria.html">Ship Chandler Onne Port Nigeria</a>
+                <a href="ports/san-pedro-ship-supply-chandler.html">San Pedro Ship Supply Chandler</a>
+                <a href="ports/ship-chandler-abidjan.html">Ship Chandler Abidjan</a>
+                <a href="ports/ship-chandler-freetown.html">Ship Chandler Freetown</a>
+                <a href="ports/monrovia-ship-chandler.html">Monrovia Ship Chandler</a>
+                <a href="ports/ship-chandler-maputo.html">Ship Chandler Maputo</a>
+                <a href="ports/ship-chandler-matadi.html">Ship Chandler Matadi</a>
+                <a href="ports/ship-chandler-beira.html">Ship Chandler Beira</a>
+                <a href="ports/ship-chandler-angola.html">Ship Chandler Angola</a>
+                <a href="ports/ship-chandler-lobito.html">Ship Chandler Lobito</a>
+                <a href="ports/shipchandler-lome.html">ShipChandler Lome</a>
+                <a href="ports/shipchandler-lome.html">Shipchandler Lome</a>
+                <a href="ports/ivory-coast-ship-chandler.html">Ivory Coast Ship Chandler</a>
+                <a href="ports/nouadhibou-ship-chandler.html">Nouadhibou Ship Chandler</a>
+                <a href="ports/ship-chandler-luanda.html">Ship Chandler Luanda</a>
+                <a href="ports/ship-chandler-cape-verde.html">Ship Chandler Cape Verde</a>
+                <a href="ports/ship-chandler-gabon.html">Ship Chandler Gabon</a>
+                <a href="ports/ship-chandler-namibia.html">Ship Chandler Namibia</a>
+                <a href="ports/walvis-bay-ship-chandler.html">Walvis Bay Ship Chandler</a>
+                <a href="ports/ship-chandler-gentil-port-gabon.html">Ship Chandler Gentil Port - Gabon</a>
+                <a href="ports/ship-chandler-takoradi.html">Ship Chandler Takoradi</a>
+                <a href="ports/ship-chandler-congo.html">Ship Chandler Congo</a>
+                <a href="ports/shipchandler-lagos.html">Shipchandler Lagos</a>
+                <a href="ports/ship-chandler-port-ambon.html">Ship Chandler Port Ambon</a>
+                <a href="ports/shipchandler-pointe-noire.html">Shipchandler Pointe Noire</a>
+                <a href="ports/ship-chandler-djibouti.html">Ship Chandler Djibouti</a>
+                <a href="ports/ship-chandler-cabinda.html">Ship Chandler Cabinda</a>
+                <a href="ports/ship-chandler-tema.html">Ship Chandler Tema</a>
+                <a href="ports/ship-chandler-mindelo.html">Ship Chandler Mindelo</a>
+                <a href="ports/ship-chandler-casablanca.html">Ship Chandler Casablanca</a>
+                <a href="ports/ship-chandler-safi-port-morocco.html">Ship Chandler Safi Port Morocco</a>
+                <a href="ports/ship-chandler-kamsar.html">Ship Chandler Kamsar</a>
+                <a href="ports/ship-chandler-soyo.html">Ship Chandler Soyo</a>
+                <a href="ports/dakar-ship-chandler.html">Dakar Ship Chandler</a>
+                <a href="ports/ship-chandler-senegal.html">Ship Chandler Senegal</a>
+                <a href="ports/ship-chandler-dakar.html">Ship Chandler Dakar</a>
+                <a href="ports/bissau-ship-chandler-guinea.html">Bissau Ship Chandler - Guinea</a>
+                <a href="ports/conakry-ship-chandler.html">Conakry Ship Chandler</a>
+                <a href="ports/ship-chandler-cotonou.html">Ship Chandler Cotonou</a>
+                <a href="ports/douala-ship-chandler.html">Douala Ship Chandler</a>
+                <a href="ports/liberia-ship-chandler.html">Liberia Ship Chandler</a>
+                <a href="ports/namibia-ship-chandler.html">Namibia Ship Chandler</a>
+                <a href="ports/ship-chandler-dakar.html">Ship Chandler Dakar</a>
+                <a href="ports/ship-chandler-mombasa.html">Ship Chandler Mombasa</a>
+                <a href="ports/ship-chandlers-saldanha-bay.html">Ship Chandlers Saldanha Bay</a>
+                <a href="ports/ship-chandler-owendo.html">Ship Chandler Owendo</a>
+                <a href="ports/ship-chandlers-richards-bay.html">Ship Chandlers Richards Bay</a>
+              </div>
                         </div>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -2109,15 +2135,26 @@
             });
 
             dropdownItems.forEach(item => {
-                const trigger = item.querySelector('.dropdown-trigger');
-                trigger.addEventListener('click', event => {
-                    event.preventDefault();
-                    const opening = !item.classList.contains('open');
-                    closeDropdowns(item);
-                    item.classList.toggle('open', opening);
-                    trigger.setAttribute('aria-expanded', String(opening));
-                });
-            });
+        const trigger = item.querySelector('.dropdown-trigger');
+        if (!trigger) return;
+        trigger.addEventListener('click', event => {
+          if (isMobile()) {
+            event.preventDefault();
+            const opening = !item.classList.contains('open');
+            closeDropdowns(item);
+            item.classList.toggle('open', opening);
+            trigger.setAttribute('aria-expanded', String(opening));
+          } else {
+            if (trigger.tagName.toLowerCase() === 'button' || !trigger.getAttribute('href') || trigger.getAttribute('href').startsWith('#')) {
+              event.preventDefault();
+              const opening = !item.classList.contains('open');
+              closeDropdowns(item);
+              item.classList.toggle('open', opening);
+              trigger.setAttribute('aria-expanded', String(opening));
+            }
+          }
+        });
+      });
 
             // Keep desktop hover behavior, while buttons also support keyboard and click.
             document.addEventListener('click', event => {
@@ -2130,12 +2167,18 @@
                 });
             });
 
-            const search = document.getElementById('port-search');
-            const portLinks = [...document.querySelectorAll('#ports-grid a')];
-            search.addEventListener('input', () => {
-                const query = search.value.trim().toLocaleLowerCase();
-                portLinks.forEach(link => { link.hidden = !link.textContent.toLocaleLowerCase().includes(query); });
-            });
+                  const search = document.getElementById('port-search');
+      if (search) {
+        const portLinks = [...document.querySelectorAll('#ports-grid a')];
+        search.addEventListener('input', () => {
+          const query = search.value.trim().toLowerCase();
+          portLinks.forEach(link => {
+            const match = link.textContent.toLowerCase().includes(query);
+            link.hidden = !match;
+            link.style.display = match ? 'flex' : 'none';
+          });
+        });
+      }
 
             const serviceTabs = [...document.querySelectorAll('.service-nav-item')];
             const servicePanels = [...document.querySelectorAll('.service-content-box')];
